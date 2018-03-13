@@ -31,7 +31,9 @@ and place it in the same folder.
 
 (6) Run in MATLAB
 
+```
 state_dyn_with_spectdist(if_normalize)
+```
 
 where if_normalize = 1, 2, 3, or 4 and corresponds to different Laplacian spectral distance measures.
 
