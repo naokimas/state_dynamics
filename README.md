@@ -1,5 +1,4 @@
-# state_dynamics
-State dynamics of temporal networks
+# Calculate system state dynamics of temporal networks
 
 Usage:
 
