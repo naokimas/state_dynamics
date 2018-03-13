@@ -2,6 +2,12 @@ function cl = plot_state_dyn(dist, s_ave, Nwindow, file_size)
 % Calculate and plot the state dynamics given the distance matrix between
 % snapshots
 %
+% Download the dunns function from the following website and save it as
+% dunns.m in the same folder as that for the otehr source files
+%
+% https://uk.mathworks.com/matlabcentral/fileexchange/27859-dunn-s-index
+%
+%
 % Input
 %   dist: distance matrix
 %   s_ave: time series of average node strength
@@ -43,11 +49,6 @@ end
 tree = linkage(dist_pdist_form, 'single');
 
 % Calculate Dunn's index
-% Download the dunns function from the following website and save it as
-% dunns.m in the same folder as that for the otehr source files
-%
-% https://uk.mathworks.com/matlabcentral/fileexchange/27859-dunn-s-index
-%
 Nc_max = 20; % largest number of clusters considered
 dunn_list = [0]; % Dunn's index for different numbers of clusters.
 % Set Dunn's index in the case of 1 cluster to 0 for convenience.
