@@ -9,7 +9,9 @@ Usage:
 
 (3) Run
 
+```
 python3 into-snapshots.py infilename resolution ID_offset
+```
 
 The infilename should not contain '.csv'.
 
