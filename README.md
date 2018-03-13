@@ -43,4 +43,11 @@ in the same folder and run
 state_dyn_deltacon()
 ```
 
+Alternatively, if the Jensen-Shannon divergence is used as the distance measure, run
+
+```
+state_dyn_with_spectdivergence(beta)
+```
+
+where beta is a parameter. In our paper, beta = 0.1, 1, and 10 are used.
 
