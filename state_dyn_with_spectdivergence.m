@@ -1,8 +1,8 @@
 function state_dyn_with_spectdivergence(beta)
 %
 % Calculate and visualize state dynamics of temporal neteworks
-% The distance between two snapshots is measured by a Laplacian spectral
-% distance.
+% The distance between two snapshots is measured by the Jensen-Shannon divergence
+% used in De Domenico & Biamonte, Physical Review X, 2016.
 %
 % The snapshots should be stored as adj1.csv, adj2.csv, ...
 %
