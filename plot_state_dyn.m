@@ -49,7 +49,7 @@ end
 tree = linkage(dist_pdist_form, 'single');
 
 % Calculate Dunn's index
-Nc_max = 20; % largest number of clusters considered
+Nc_max = min(20,Nwindow); % largest number of clusters considered
 dunn_list = [0]; % Dunn's index for different numbers of clusters.
 % Set Dunn's index in the case of 1 cluster to 0 for convenience.
 for Nc_tmp = 2:Nc_max

@@ -49,13 +49,17 @@ for i = 1:Nwindow
     dist(i,i) = 0.0;
     for j = 1:i-1
         dist(i,j) = sqrt(sum((spectrum(:,i) - spectrum(:,j)) .^ 2));
-        if mod(if_normalize, 2) == 1 % Normalize the distance
-            dist(i,j) = dist(i,j) / sqrt(max(sum(spectrum(:,i) .^ 2), sum(spectrum(:,j) .^ 2)));
+        if mod(if_normalize, 2) == 0 % Normalize the distance
+            if max(max(spectrum(:,i)), max(spectrum(:,j))) > 1e-10
+                dist(i,j) = dist(i,j) / sqrt(max(sum(spectrum(:,i) .^ 2), sum(spectrum(:,j) .^ 2)));
+            else % rewritten around here; both snapshots are empty matrices
+                dist(i,j) = 0.0;
+            end
         end
         dist(j,i) = dist(i,j);
     end
 end
 
-plot_state_dyn(dist, s_ave, Nwindow, file_size)
+plot_state_dyn(dist, s_ave, Nwindow, file_size);
 
 end
