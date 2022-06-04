@@ -3,7 +3,7 @@
 #
 #   python3 into-snapshots.py infilename resolution ID_offset
 #
-#       NB: The input file should be in the csv format and provided to this program without the extension.
+#       NB: The input file should be in the csv format and provided to this code as input argument infilename without the extension.
 #               The input file should have IDs of two nodes forming an event in the 1st and 2nd columns
 #                and the timestamp of the event in the 3rd column.
 #               Node index should start from 0 and consecutive. However, it is not a must; the only constraint is that the node index should be non-negative. The main MATLAB code treats missing node indices as isolated nodes.
