@@ -100,9 +100,9 @@ for i in range(Nwindow): # from 0 to Nwindow-1
 
     df2['v1'] += 1 # MATLAB indexing starts from 1, not from 0
     df2['v2'] += 1
-    node_ind_max += 1
     df2.to_csv('adj' + str(i+1+offset) + '.csv', sep=' ', header=None, index=False) # write files
 
 # all snapshots done
 
+node_ind_max += 1
 print ("tmax = ", tmax, ", there are ", Nwindow, " snapshots, largest node index = ", node_ind_max)
